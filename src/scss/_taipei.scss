@@ -1,0 +1,77 @@
+.taipei-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+  .taipei-half-image {
+    background: url('/img/1.jpg');
+    background-size: cover;
+  }
+  .taipei-half-description {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 5fr 1fr;
+
+    .nav {
+      background: rgba(199, 207, 226, 0.7);
+      padding: 10% 5%;
+      display: flex;
+
+      justify-content: center;
+
+      a {
+        align-self: flex-start;
+      }
+    }
+
+    .description-box {
+      background: rgba(40, 40, 40, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20%;
+      color: rgb(245, 245, 245);
+      font-size: 1.5rem;
+      text-align: center;
+
+      .description-text {
+        padding: 5%;
+        background: rgba(255, 255, 255, 0.1);
+        // padding: 15% 5%;
+        h1 {
+          font-size: 2.3rem;
+        }
+        p {
+          margin: 3rem 0;
+        }
+        button {
+          background: rgba(179, 179, 179, 0.1);
+          font-size: 1.3rem;
+          padding: 1em 1.2em;
+          border: 0.1em solid rgb(228, 228, 228);
+          border-radius: 10%;
+          color: rgb(228, 228, 228);
+          text-align: center;
+          transition: all 0.3s linear;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
+    }
+
+    .footer {
+      grid-area: auto/1/auto/3;
+      background: rgba(73, 63, 61, 0.75);
+      display: flex;
+      align-items: center;
+
+      .socials {
+        justify-self: flex-end;
+        margin-left: auto;
+      }
+    }
+  }
+}
